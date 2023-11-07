@@ -24,7 +24,7 @@ class NoteController extends Controller
         // });
         return view('notes.index')->with('notes', $notes);
     }
-
+    
     /**
      * Show the form for creating a new resource.
      */
