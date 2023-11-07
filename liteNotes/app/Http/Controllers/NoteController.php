@@ -18,10 +18,11 @@ class NoteController extends Controller
         // $notes = Note::where('user_id', $userId)->get();
         // dd($notes);
 
-        $notes = Note::where('user_id', Auth::id())->get();
-        $notes->each(function ($note) {
-            dump($note->title);
-        });
+        $notes = Note::where('user_id', Auth::id())->latest('updated_at')->get();
+        // $notes->each(function ($note) {
+        //     dump($note->title);
+        // });
+        return view('notes.index')->with('notes', $notes);
     }
 
     /**
