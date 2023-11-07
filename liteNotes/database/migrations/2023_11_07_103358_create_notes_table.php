@@ -13,11 +13,13 @@ return new class extends Migration
     {
         Schema::create('notes', function (Blueprint $table) {
             $table->id();
-            $table->foreign('user_id')->constrained();
+            $table->foreignId('user_id')->constrained();
+            // $table->foreign('user_id')->references('id')->on('users');
             $table->string('fname');
             $table->string('lname');
             $table->string('title');
             $table->longText('text');
+
             $table->timestamps();
         });
     }
