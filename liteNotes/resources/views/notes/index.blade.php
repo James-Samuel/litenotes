@@ -4,6 +4,8 @@
             {{ __('Notes') }}
         </h2>
     </x-slot>
+    <!-- Scripts -->
+    {{-- @vite(['resources/css/app.css', 'resources/js/app.js']); --}}
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
